@@ -1,0 +1,498 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+
+@sam07172204
+Landy510
+/
+Landy510.github.io
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Landy510.github.io/2022/03/20/CSS-金魚系列切版-圖文滿版區塊/index.html
+
+Landy510 Site updated: 2022-03-27 12:13:18
+Latest commit f95f687 on 27 Mar
+ History
+ 0 contributors
+456 lines (307 sloc)  21.8 KB
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/owlBig.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/owl.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"landy510.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="紀錄 金魚系列切版-圖文滿版區塊 學習過程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS-金魚系列切版-圖文滿版區塊">
+<meta property="og:url" content="https://landy510.github.io/2022/03/20/CSS-%E9%87%91%E9%AD%9A%E7%B3%BB%E5%88%97%E5%88%87%E7%89%88-%E5%9C%96%E6%96%87%E6%BB%BF%E7%89%88%E5%8D%80%E5%A1%8A/index.html">
+<meta property="og:site_name" content="Landy Blog">
+<meta property="og:description" content="紀錄 金魚系列切版-圖文滿版區塊 學習過程">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://landy510.github.io/2022/03/20/CSS-%E9%87%91%E9%AD%9A%E7%B3%BB%E5%88%97%E5%88%87%E7%89%88-%E5%9C%96%E6%96%87%E6%BB%BF%E7%89%88%E5%8D%80%E5%A1%8A/align-items-problem.png">
+<meta property="og:image" content="https://landy510.github.io/2022/03/20/CSS-%E9%87%91%E9%AD%9A%E7%B3%BB%E5%88%97%E5%88%87%E7%89%88-%E5%9C%96%E6%96%87%E6%BB%BF%E7%89%88%E5%8D%80%E5%A1%8A/%E4%BF%AE%E6%AD%A3%E5%BE%8C%E7%9A%84%E7%89%88%E5%9E%8B.png">
+<meta property="og:image" content="https://landy510.github.io/2022/03/20/CSS-%E9%87%91%E9%AD%9A%E7%B3%BB%E5%88%97%E5%88%87%E7%89%88-%E5%9C%96%E6%96%87%E6%BB%BF%E7%89%88%E5%8D%80%E5%A1%8A/linear-gradient.png">
+<meta property="article:published_time" content="2022-03-20T14:07:40.000Z">
+<meta property="article:modified_time" content="2022-03-20T15:28:18.425Z">
+<meta property="article:author" content="Landy">
+<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="CSS background">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://landy510.github.io/2022/03/20/CSS-%E9%87%91%E9%AD%9A%E7%B3%BB%E5%88%97%E5%88%87%E7%89%88-%E5%9C%96%E6%96%87%E6%BB%BF%E7%89%88%E5%8D%80%E5%A1%8A/align-items-problem.png">
+
+<link rel="canonical" href="https://landy510.github.io/2022/03/20/CSS-%E9%87%91%E9%AD%9A%E7%B3%BB%E5%88%97%E5%88%87%E7%89%88-%E5%9C%96%E6%96%87%E6%BB%BF%E7%89%88%E5%8D%80%E5%A1%8A/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>CSS-金魚系列切版-圖文滿版區塊 | Landy Blog</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1T19DR0SEG"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1T19DR0SEG');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Landy Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+
+
+          <div class="content post posts-expand">
+
+
+
+
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://landy510.github.io/2022/03/20/CSS-%E9%87%91%E9%AD%9A%E7%B3%BB%E5%88%97%E5%88%87%E7%89%88-%E5%9C%96%E6%96%87%E6%BB%BF%E7%89%88%E5%8D%80%E5%A1%8A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Landy">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Landy Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CSS-金魚系列切版-圖文滿版區塊
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+
+              <time title="創建時間：2022-03-20 22:07:40 / 修改時間：23:28:18" itemprop="dateCreated datePublished" datetime="2022-03-20T22:07:40+08:00">2022-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+                </span>
+            </span>
+
+
+            <div class="post-description">紀錄 金魚系列切版-圖文滿版區塊 學習過程</div>
+
+        </div>
+      </header>
+
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+
+        <h1 id="Source-Url"><a href="#Source-Url" class="headerlink" title="Source Url"></a>Source Url</h1><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=rwTMBmnIHcY&list=PLqivELodHt3hxeuLX8PYaI8u1GcDaBoJo">原始課程網址</a></p>
+<h1 id="學習點"><a href="#學習點" class="headerlink" title="學習點"></a>學習點</h1><h2 id="1-解決因-flex-造成子層元素高度填滿父層的問題"><a href="#1-解決因-flex-造成子層元素高度填滿父層的問題" class="headerlink" title="1. 解決因 flex 造成子層元素高度填滿父層的問題"></a>1. 解決因 flex 造成子層元素高度填滿父層的問題</h2><p>影片 6:50 的部分，當父層有 display:flex 的屬性，會使得其內部子層元素自動填滿父層的寬或高，是填滿寬或高就是取決於父層的 flex-direction 屬性是什麼，也就是資料流的方向。</p>
+<p>所以，跟著影片一路到 6:50 ，會發現 banner-txt h1 的 border-bottom 會填滿整個父層的寬，也就是我們上面提到的部分。<br>結果會長得像下面這樣<br><img src="align-items-problem.png" alt="子層元素寬度填滿父層的問題"><br>那解決的辦法為在 banner-txt  也就是父層中加入 <code>align-items: flex-start</code> 就可以解決這個填滿父層的問題囉 (在 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=_nCBQ6AIzDU&t=1702s">Amos 的教學影片 1:13:32</a> 有提到這部分的功能)。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.banner-txt &#123;</span><br><span class="line">	height: 100%;</span><br><span class="line">	display: flex;</span><br><span class="line">	flex-direction: column;</span><br><span class="line">	align-items: flex-start; &#x2F;&#x2F; 加這一行</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>改正後的畫面<br><img src="%E4%BF%AE%E6%AD%A3%E5%BE%8C%E7%9A%84%E7%89%88%E5%9E%8B.png" alt="修正子層元素寬度填滿父層的問題"></p>
+<p>以上就修正完畢囉~</p>
+<h2 id="2-如何呈現斜的分隔線"><a href="#2-如何呈現斜的分隔線" class="headerlink" title="2. 如何呈現斜的分隔線"></a>2. 如何呈現斜的分隔線</h2><p>這堂課的範例會有一個斜的分隔線，將文字區和圖片區切開，是利用 background 的 linear-gradient 來達成的<br>寫法如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.banner &#123;</span><br><span class="line">	background: linear-gradient(115deg, #7bf 50%, transparent 50%) center center &#x2F;</span><br><span class="line">      100% 100%</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接下來，就來剖析一下 <code>linear-gradient</code> 這些參數都是什麼意思<br><strong>第一個角度參數 115 deg</strong> 是代表要朝哪個角度作為顏色漸層的方向</p>
+<p><strong>第二個 #7bf 50%</strong> 是代表由 #7bf 這個顏色開始做漸層，50% 是代表起始色位置，所以，0-50% 都會是 #7bf 的顏色</p>
+<p><strong>第三個參數 transparent 50%</strong> 代表終止色為 transparent 也就是透明，50% 是代表終止色位置，所以，50% - 100% 都會是透明無色。</p>
+<p>因為，起始色位置和終止色位置是同一個，而且角色是 115deg ，就可以達到有一個斜線，其中一半的顏色全部都是 #7bf，另外一半就都是空白的囉。</p>
+<p>那剩下的 <strong>center center / 100% 100%</strong> ，分別為 <code>background-position</code> 和 <code>background-size</code> 的屬性值，它們彼此之間會用 <code>/</code> 來區隔。<br>拆解來看就等於 <code>background-position: center center</code> 代表背景要水平居中，垂直居中，<br><code>background-size : 100% 100%</code> (前面為寬，後面為高) 代表背景的寬高分別等於父層的寬度和高度。</p>
+<p>最後畫面是<br><img src="linear-gradient.png" alt="斜分隔線的最終畫面"></p>
+<h2 id="3-如何呈現背景圖佔滿剩餘另外一半的效果"><a href="#3-如何呈現背景圖佔滿剩餘另外一半的效果" class="headerlink" title="3. 如何呈現背景圖佔滿剩餘另外一半的效果"></a>3. 如何呈現背景圖佔滿剩餘另外一半的效果</h2><p>上面第二點有講到了，如何達成斜的分隔線一半是 #7bf 而另外一半是空白無色的效果。</p>
+<p>那這邊的話，是要剖析將空白無色的那一半用圖片來填滿。<br>其實， <strong>background 可以設定多層的 background</strong> ，只是彼此之間要用逗號 <code>,</code> 分開。<br>那我們就來將背景圖的部分加入進去吧</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.banner &#123;</span><br><span class="line">	background: </span><br><span class="line">		linear-gradient(115deg, #7bf 50%, transparent 50%) center center &#x2F; 100% 100%,</span><br><span class="line">		url(&#39;https:&#x2F;&#x2F;picsum.photos&#x2F;1200&#x2F;600?random&#x3D;10&#39;) right center &#x2F; auto 100%;  &#x2F;&#x2F; 加了一張背景圖</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>那一樣來剖析一下，加入的那一行屬性在幹嘛，<br>首先，<code>url(&#39;https://picsum.photos/1200/600?random=10&#39;)</code> 這是 <code>background-image</code> 的屬性值<br>剩下的 <code>right center / auto 100%</code>，分別是 <code>background-position</code> 和 <code>background-size</code> 的屬性值了<br>拆解來看就等於 <code>background-position:right center</code> 代表背景要水平居右，垂直居中<br><code>background-size : auto 100%</code> 代表背景的寬度會是圖片自己本身的寬度，剩下的 100%，就是代表背景圖片高度等於父層的高度。</p>
+<h1 id="Final-Result"><a href="#Final-Result" class="headerlink" title="Final Result"></a>Final Result</h1><p><a target="_blank" rel="noopener" href="https://stackblitz.com/edit/web-platform-qzrpqs?file=styles.css">練習連結</a></p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol>
+<li><p><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10248148">金魚之Background-image</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10248636">金魚之Background-position</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10250499">金魚之Background</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.w3schools.com/cssref/css3_pr_background-size.asp">background-size css property</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">background css property</a></p>
+</li>
+</ol>
+
+    </div>
+
+
+
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/CSS/" rel="tag"># CSS</a>
+              <a href="/tags/CSS-background/" rel="tag"># CSS background</a>
+          </div>
+
+
+
+
+
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/02/13/Angular-image-Preview/" rel="prev" title="Angular - image Preview">
+      <i class="fa fa-chevron-left"></i> Angular - image Preview
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/03/20/CSS-%E9%87%91%E9%AD%9A%E7%B3%BB%E5%88%97%E5%88%87%E7%89%88-%E4%BA%92%E5%8B%95%E5%9C%96%E6%96%87%E5%8D%A1%E7%89%87/" rel="next" title="CSS-金魚系列切版-互動圖文卡片">
+      CSS-金魚系列切版-互動圖文卡片 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+
+  </article>
+
+
+
+
+
+
+          </div>
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+
+
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Source-Url"><span class="nav-number">1.</span> <span class="nav-text">Source Url</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%B8%E7%BF%92%E9%BB%9E"><span class="nav-number">2.</span> <span class="nav-text">學習點</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%A7%A3%E6%B1%BA%E5%9B%A0-flex-%E9%80%A0%E6%88%90%E5%AD%90%E5%B1%A4%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6%E5%A1%AB%E6%BB%BF%E7%88%B6%E5%B1%A4%E7%9A%84%E5%95%8F%E9%A1%8C"><span class="nav-number">2.1.</span> <span class="nav-text">1. 解決因 flex 造成子層元素高度填滿父層的問題</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%A6%82%E4%BD%95%E5%91%88%E7%8F%BE%E6%96%9C%E7%9A%84%E5%88%86%E9%9A%94%E7%B7%9A"><span class="nav-number">2.2.</span> <span class="nav-text">2. 如何呈現斜的分隔線</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%A6%82%E4%BD%95%E5%91%88%E7%8F%BE%E8%83%8C%E6%99%AF%E5%9C%96%E4%BD%94%E6%BB%BF%E5%89%A9%E9%A4%98%E5%8F%A6%E5%A4%96%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%88%E6%9E%9C"><span class="nav-number">2.3.</span> <span class="nav-text">3. 如何呈現背景圖佔滿剩餘另外一半的效果</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Final-Result"><span class="nav-number">3.</span> <span class="nav-text">Final Result</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Landy</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+
+          <span class="site-state-item-count">132</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+
+
+
+
+<div class="copyright">
+
+  &copy;
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Landy</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
