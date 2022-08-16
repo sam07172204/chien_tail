@@ -17,10 +17,10 @@ Syntax highlighted code block
 
 - Bulleted
 - List
-
+![image](https://user-images.githubusercontent.com/57904905/184795308-78322988-f3b7-4ac7-ae99-5077e87fb58c.png)
 1. Numbered
 2. List
-![image](https://user-images.githubusercontent.com/57904905/184795308-78322988-f3b7-4ac7-ae99-5077e87fb58c.png)
+
 
 **Bold** and _Italic_ and `Code` text
 
